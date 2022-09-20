@@ -1,15 +1,15 @@
-test> show dbs
+test> show dbs       //show database
 admin   40.00 KiB
 config  72.00 KiB
 majharul>
-test> use majharul
+test> use majharul   //'use' keyword for creating database or working on existing database
 switched to db majharul
-majharul> show dbs
+majharul> show dbs  // majharul show korse na. cz minimum akta collection thakte hobe.
 admin   40.00 KiB
 config  72.00 KiB
 local   40.00 KiB
 
-majharul> db.collection.insertOne({name:"chamok", college:"kazi azhar ali", id: 12, active: true})
+majharul> db.collection.insertOne({name:"chamok", college:"kazi azhar ali", id: 12, active: true})  //for creating collection of database.
 {
   acknowledged: true,
   insertedId: ObjectId("6329d2ac67ec27d13d9d239c")
@@ -19,9 +19,9 @@ admin     40.00 KiB
 config    96.00 KiB
 local     40.00 KiB
 majharul  40.00 KiB
-majharul> db
+majharul> db    // which database are working
 majharul
-majharul> show collections
+majharul> show collections  
 collection
 majharul> db.collection2.insertOne({name:"Chamok2", college:"Bonarpara",id: 12})
 {
@@ -52,3 +52,13 @@ majharul> db.collection.find().pretty()
   }
 ]
 majharul> quit()
+
+
+
+
+
+
+
+
+
+
