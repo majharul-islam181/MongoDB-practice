@@ -1,0 +1,54 @@
+test> show dbs
+admin   40.00 KiB
+config  72.00 KiB
+majharul>
+test> use majharul
+switched to db majharul
+majharul> show dbs
+admin   40.00 KiB
+config  72.00 KiB
+local   40.00 KiB
+
+majharul> db.collection.insertOne({name:"chamok", college:"kazi azhar ali", id: 12, active: true})
+{
+  acknowledged: true,
+  insertedId: ObjectId("6329d2ac67ec27d13d9d239c")
+}
+majharul> show dbs
+admin     40.00 KiB
+config    96.00 KiB
+local     40.00 KiB
+majharul  40.00 KiB
+majharul> db
+majharul
+majharul> show collections
+collection
+majharul> db.collection2.insertOne({name:"Chamok2", college:"Bonarpara",id: 12})
+{
+  acknowledged: true,
+  insertedId: ObjectId("6329d41d67ec27d13d9d239d")
+}
+majharul> show collections
+collection
+collection2
+majharul> db.collection.find()
+[
+  {
+    _id: ObjectId("6329d2ac67ec27d13d9d239c"),
+    name: 'chamok',
+    college: 'kazi azhar ali',
+    id: 12,
+    active: true
+  }
+]
+majharul> db.collection.find().pretty()
+[
+  {
+    _id: ObjectId("6329d2ac67ec27d13d9d239c"),
+    name: 'chamok',
+    college: 'kazi azhar ali',
+    id: 12,
+    active: true
+  }
+]
+majharul> quit()
